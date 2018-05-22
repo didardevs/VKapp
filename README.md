@@ -1,0 +1,2 @@
+# VKapp
+VKapp - is the application cloning some features of social network VK ('Vkontakte'). The application has been developed for the education purpose during studies at GeekBrains University which is being part of Mail.ru Group. The application has been developed with the use of the following libraries: Alamofire for REST requests, Realm database management system for local database and Google Firebase for remote database.
