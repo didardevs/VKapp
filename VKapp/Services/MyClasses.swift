@@ -65,45 +65,6 @@ class VKFriendsPhoto{
     }
 }
 
-class VKNewsFeed{
-    var postId = 0
-    var sourceId = 0
-    var postTimeStamp : Double = 0.0
-    var postOwner = ""
-    var postText = ""
-    var likesCount = 0.0
-    var commentsCount = 0.0
-    var repostCount = 0.0
-    var viewersCount = 0.0
-    var ownerIcon = ""
-    var ownerPostId = 0
-    var postImage = ""
-    convenience init(json: JSON){
-        self.init()
-        
-        self.postId = json["post_id"].intValue
-        self.sourceId = json["source_id"].intValue
-        self.postText = json["text"].stringValue
-        self.postTimeStamp = json["date"].doubleValue
-        self.likesCount = json["likes"]["count"].doubleValue
-        self.commentsCount = json["comments"]["count"].doubleValue
-        self.repostCount = json["reposts"]["count"].doubleValue
-        self.viewersCount = json["views"]["count"].doubleValue
-        self.postImage = json["attachments"][0]["photo"]["photo_604"].stringValue
-    }
-    convenience init(groupProfiles json: JSON) {
-        self.init()
-        ownerPostId = json["id"].intValue
-        ownerIcon = json["photo_50"].stringValue
-        postOwner = json["name"].stringValue
-    }
-    convenience init(friendProfiles json: JSON) {
-        self.init()
-        ownerPostId = json["id"].intValue
-        ownerIcon = json["photo_50"].stringValue
-        postOwner = json["first_name"].stringValue + " " + json["last_name"].stringValue
-    }
-}
 
 
 

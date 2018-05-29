@@ -10,15 +10,15 @@ import UIKit
 
 class NewsTVC: UITableViewController {
     
-    var vkService = VKServices()
+    var vkService = GetNews()
     var vkNewsfeeds = [VKNewsFeed]()
     var heightCache: [IndexPath : CGFloat] = [:]
-    
+        let accessToken = UserDefaults.standard.string(forKey: "token")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetUp()  
-        vkService.getAllNews() {[weak self] vkNewsfeeds in
+        vkService.getAllNews(accessToken: accessToken!) {[weak self] vkNewsfeeds in
             self?.vkNewsfeeds = vkNewsfeeds
             DispatchQueue.main.async {
                 self?.tableView.reloadData()

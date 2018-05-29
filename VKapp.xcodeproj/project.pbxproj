@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E96C7BC3E063742C155C82E /* Pods_VKappToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BCF5FC720939B3E84E25C3 /* Pods_VKappToday.framework */; };
+		5F12273220BC2D420021CC21 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F12273120BC2D420021CC21 /* NotificationCenter.framework */; };
+		5F12273520BC2D420021CC21 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F12273420BC2D420021CC21 /* TodayViewController.swift */; };
+		5F12273820BC2D420021CC21 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F12273620BC2D420021CC21 /* MainInterface.storyboard */; };
+		5F12273C20BC2D420021CC21 /* VKappToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5F12273020BC2D420021CC21 /* VKappToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F12274320BC37D30021CC21 /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC4E2620865BE10090813E /* NewsRequest.swift */; };
+		5F12274620BC3AF10021CC21 /* TodayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F12274520BC3AF10021CC21 /* TodayViewCell.swift */; };
 		5F38651B2084C00200B3ABA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F38651A2084C00200B3ABA3 /* GoogleService-Info.plist */; };
 		5F38651E2084C1C000B3ABA3 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F38651D2084C1C000B3ABA3 /* FirebaseService.swift */; };
 		5F74574A207F3BAA00F0825B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F745749207F3BAA00F0825B /* AppDelegate.swift */; };
@@ -43,7 +50,40 @@
 		72CE7AC4644EA76203E41661 /* Pods_VKapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86606BF1F58127E7D91ABE46 /* Pods_VKapp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5F12273A20BC2D420021CC21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F74573E207F3BAA00F0825B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F12272F20BC2D420021CC21;
+			remoteInfo = VKappToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5F12274020BC2D420021CC21 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5F12273C20BC2D420021CC21 /* VKappToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		50416D29405B067211FD299D /* Pods-VKappToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKappToday/Pods-VKappToday.debug.xcconfig"; sourceTree = "<group>"; };
+		5F12273020BC2D420021CC21 /* VKappToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VKappToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F12273120BC2D420021CC21 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5F12273420BC2D420021CC21 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		5F12273720BC2D420021CC21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5F12273920BC2D420021CC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F12274120BC2DB90021CC21 /* VKapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VKapp.entitlements; sourceTree = "<group>"; };
+		5F12274220BC2DCD0021CC21 /* VKappToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VKappToday.entitlements; sourceTree = "<group>"; };
+		5F12274520BC3AF10021CC21 /* TodayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewCell.swift; sourceTree = "<group>"; };
 		5F38651A2084C00200B3ABA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F38651D2084C1C000B3ABA3 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		5F745746207F3BAA00F0825B /* VKapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,11 +120,22 @@
 		5FBC4E2620865BE10090813E /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellHeightDelegate.swift; sourceTree = "<group>"; };
 		639ADD4ACCC0EB4C639198A4 /* Pods-VKapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKapp/Pods-VKapp.release.xcconfig"; sourceTree = "<group>"; };
+		7BD22E4130645BD26B49D3D8 /* Pods-VKappToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKappToday/Pods-VKappToday.release.xcconfig"; sourceTree = "<group>"; };
 		86606BF1F58127E7D91ABE46 /* Pods_VKapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD35B6369051787F0AEDD58 /* Pods-VKapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKapp/Pods-VKapp.debug.xcconfig"; sourceTree = "<group>"; };
+		C1BCF5FC720939B3E84E25C3 /* Pods_VKappToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKappToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5F12272D20BC2D420021CC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F12273220BC2D420021CC21 /* NotificationCenter.framework in Frameworks */,
+				4E96C7BC3E063742C155C82E /* Pods_VKappToday.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F745743207F3BAA00F0825B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +151,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F12273320BC2D420021CC21 /* VKappToday */ = {
+			isa = PBXGroup;
+			children = (
+				5F12274220BC2DCD0021CC21 /* VKappToday.entitlements */,
+				5F12273420BC2D420021CC21 /* TodayViewController.swift */,
+				5F12273620BC2D420021CC21 /* MainInterface.storyboard */,
+				5F12273920BC2D420021CC21 /* Info.plist */,
+				5F12274520BC3AF10021CC21 /* TodayViewCell.swift */,
+			);
+			path = VKappToday;
+			sourceTree = "<group>";
+		};
 		5F38651C2084C1A500B3ABA3 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				5F745748207F3BAA00F0825B /* VKapp */,
+				5F12273320BC2D420021CC21 /* VKappToday */,
 				5F745747207F3BAA00F0825B /* Products */,
 				EFD6D523A1283C39720BEB02 /* Pods */,
 				F20F8CB0F18A73CFEF505AE5 /* Frameworks */,
@@ -123,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				5F745746207F3BAA00F0825B /* VKapp.app */,
+				5F12273020BC2D420021CC21 /* VKappToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +195,7 @@
 		5F745748207F3BAA00F0825B /* VKapp */ = {
 			isa = PBXGroup;
 			children = (
+				5F12274120BC2DB90021CC21 /* VKapp.entitlements */,
 				5F745749207F3BAA00F0825B /* AppDelegate.swift */,
 				5F8FC8CF207F5C7000DC116D /* LoginVC.swift */,
 				5F7ECA2120AD4621009B236E /* AppNotifications.swift */,
@@ -224,6 +290,8 @@
 			children = (
 				9BD35B6369051787F0AEDD58 /* Pods-VKapp.debug.xcconfig */,
 				639ADD4ACCC0EB4C639198A4 /* Pods-VKapp.release.xcconfig */,
+				50416D29405B067211FD299D /* Pods-VKappToday.debug.xcconfig */,
+				7BD22E4130645BD26B49D3D8 /* Pods-VKappToday.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -236,6 +304,8 @@
 				5F8FC8C7207F5BF500DC116D /* SDWebImage.framework */,
 				5F8FC8C9207F5BF500DC116D /* SwiftyJSON.framework */,
 				86606BF1F58127E7D91ABE46 /* Pods_VKapp.framework */,
+				5F12273120BC2D420021CC21 /* NotificationCenter.framework */,
+				C1BCF5FC720939B3E84E25C3 /* Pods_VKappToday.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -243,6 +313,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5F12272F20BC2D420021CC21 /* VKappToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F12273F20BC2D420021CC21 /* Build configuration list for PBXNativeTarget "VKappToday" */;
+			buildPhases = (
+				D9D826DEBB321B45CE95EA68 /* [CP] Check Pods Manifest.lock */,
+				5F12272C20BC2D420021CC21 /* Sources */,
+				5F12272D20BC2D420021CC21 /* Frameworks */,
+				5F12272E20BC2D420021CC21 /* Resources */,
+				F8E42115D3F38A5ED4F64DC7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKappToday;
+			productName = VKappToday;
+			productReference = 5F12273020BC2D420021CC21 /* VKappToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5F745745207F3BAA00F0825B /* VKapp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F745758207F3BAB00F0825B /* Build configuration list for PBXNativeTarget "VKapp" */;
@@ -253,10 +342,12 @@
 				5F745744207F3BAA00F0825B /* Resources */,
 				613E07C72AAC033DBE3B5CF2 /* [CP] Embed Pods Frameworks */,
 				BD0BA17714599C897D7FB618 /* [CP] Copy Pods Resources */,
+				5F12274020BC2D420021CC21 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5F12273B20BC2D420021CC21 /* PBXTargetDependency */,
 			);
 			name = VKapp;
 			productName = VKapp;
@@ -273,9 +364,20 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Didar Naurzbayev";
 				TargetAttributes = {
+					5F12272F20BC2D420021CC21 = {
+						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					5F745745207F3BAA00F0825B = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -297,11 +399,20 @@
 			projectRoot = "";
 			targets = (
 				5F745745207F3BAA00F0825B /* VKapp */,
+				5F12272F20BC2D420021CC21 /* VKappToday */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5F12272E20BC2D420021CC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F12273820BC2D420021CC21 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F745744207F3BAA00F0825B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +476,39 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKapp/Pods-VKapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D9D826DEBB321B45CE95EA68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKappToday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8E42115D3F38A5ED4F64DC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKappToday/Pods-VKappToday-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F9CC494D542D845520B1A795 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +530,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5F12272C20BC2D420021CC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F12274320BC37D30021CC21 /* NewsRequest.swift in Sources */,
+				5F12273520BC2D420021CC21 /* TodayViewController.swift in Sources */,
+				5F12274620BC3AF10021CC21 /* TodayViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F745742207F3BAA00F0825B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,7 +574,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5F12273B20BC2D420021CC21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F12272F20BC2D420021CC21 /* VKappToday */;
+			targetProxy = 5F12273A20BC2D420021CC21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		5F12273620BC2D420021CC21 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F12273720BC2D420021CC21 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		5F74574D207F3BAA00F0825B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,6 +610,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5F12273D20BC2D420021CC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50416D29405B067211FD299D /* Pods-VKappToday.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VKappToday/VKappToday.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWZT8E272V;
+				INFOPLIST_FILE = VKappToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp.VKappTod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F12273E20BC2D420021CC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD22E4130645BD26B49D3D8 /* Pods-VKappToday.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VKappToday/VKappToday.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWZT8E272V;
+				INFOPLIST_FILE = VKappToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp.VKappTod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5F745756207F3BAB00F0825B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -558,7 +770,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BD35B6369051787F0AEDD58 /* Pods-VKapp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VKapp/VKapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWZT8E272V;
 				INFOPLIST_FILE = VKapp/Info.plist;
@@ -577,7 +791,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 639ADD4ACCC0EB4C639198A4 /* Pods-VKapp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VKapp/VKapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWZT8E272V;
 				INFOPLIST_FILE = VKapp/Info.plist;
@@ -595,6 +811,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5F12273F20BC2D420021CC21 /* Build configuration list for PBXNativeTarget "VKappToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F12273D20BC2D420021CC21 /* Debug */,
+				5F12273E20BC2D420021CC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5F745741207F3BAA00F0825B /* Build configuration list for PBXProject "VKapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

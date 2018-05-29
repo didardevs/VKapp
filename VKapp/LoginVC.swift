@@ -15,6 +15,9 @@ import FirebaseDatabase
 let userDefaults = UserDefaults.standard
 var token = ""
 let userAuthCheck = userDefaults.bool(forKey: "Authorised")
+
+let userDefaultes = UserDefaults(suiteName: "group.vkappGroup")
+
 class LoginVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!{
         didSet{
@@ -80,6 +83,7 @@ extension LoginVC: WKNavigationDelegate {
             userDefaults.set(true, forKey: "Authorised")
             performSegue(withIdentifier: "loginComplete", sender: nil)
 
+            userDefaultes?.set(token, forKey: "AccessToken")
             let userID = userDefaults.string(forKey: "userID")
         let firebase = FirebaseService()
             firebase.saveUserToFB(userID: userID!)
