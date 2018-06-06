@@ -10,12 +10,16 @@ import UIKit
 import Firebase
 import RealmSwift
 import UserNotifications
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    var newsPost: Results<VKNewsFeed2>?
+    var vkNewsFeed = [[String:String]]()
+    var wcSession: WCSession?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -29,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        if WCSession.isSupported() {
+            wcSession = WCSession.default
+            wcSession?.delegate = self
+            wcSession?.activate()
+        }
+        
         application.registerForRemoteNotifications()
         return true
     }
@@ -72,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if  requests != nil {
                 print("Заявки в друзья загружены в фоновом режиме")
                 completionHandler(.newData)
-
+                
                 DispatchQueue.main.async {
                     application.applicationIconBadgeNumber =
                         userDefaults.integer(forKey: "requestsCount")
@@ -112,6 +122,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    
+}
+
+extension AppDelegate: WCSessionDelegate{
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        syncNews()
+        if message["request"] as? String == "VKnews" {
+            replyHandler(["newsFeed": vkNewsFeed])
+            
+        }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    private func syncNews() {
+        
+        newsPost = RealmL.fetchData(object: VKNewsFeed2())
+        vkNewsFeed.removeAll()
+        
+        for new in newsPost! {
+            vkNewsFeed.append(["postOwner": new.postOwner,
+                               "ownerIcon": new.ownerIcon,
+                               "postText": new.postText,
+                               "postImage": new.postImage
+                ])
+        }
+    }
     
 }
 

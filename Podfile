@@ -22,6 +22,7 @@ target 'VKappToday' do
   use_frameworks!
     pod 'Alamofire', '~> 4.6'
     pod 'SwiftyJSON'
+    pod 'RealmSwift'
     pod 'SDWebImage', '~> 4.0'
     
   # Pods for VKappToday
@@ -35,6 +36,7 @@ target 'VKappImessage' do
   use_frameworks!
     pod 'Alamofire', '~> 4.6'
     pod 'SwiftyJSON'
+    pod 'RealmSwift'
     pod 'SDWebImage', '~> 4.0'
     
   # Pods for VKappImessage

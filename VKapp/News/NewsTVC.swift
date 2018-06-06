@@ -7,35 +7,34 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewsTVC: UITableViewController {
     
     var vkService = GetNews()
-    var vkNewsfeeds = [VKNewsFeed]()
+    var vkNewsfeeds: Results<VKNewsFeed2>?
+    var notifToken: NotificationToken?
     var heightCache: [IndexPath : CGFloat] = [:]
-        let accessToken = UserDefaults.standard.string(forKey: "token")
+    let accessToken = UserDefaults.standard.string(forKey: "token")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarSetUp()  
-        vkService.getAllNews(accessToken: accessToken!) {[weak self] vkNewsfeeds in
-            self?.vkNewsfeeds = vkNewsfeeds
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
+        navigationBarSetUp()
+        
+        tableAndRealmUpdate()
+        vkService.getAllPosts()
     }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vkNewsfeeds.count
+        return vkNewsfeeds?.count ?? 0
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsID", for: indexPath) as! NewsTVCell
         
-        let newsfeed = vkNewsfeeds[indexPath.row]
+        let newsfeed = vkNewsfeeds![indexPath.row]
         cell.iconImage.sd_setImage(with: URL(string:newsfeed.ownerIcon))
         cell.postImage.sd_setImage(with: URL(string:newsfeed.postImage))
         cell.nameLabel.text = newsfeed.postOwner
@@ -45,13 +44,13 @@ class NewsTVC: UITableViewController {
         cell.commentsLabel.text = divideByK(number: newsfeed.commentsCount)
         cell.sharesLabel.text = divideByK(number: newsfeed.repostCount)
         cell.viewersLabel.text = divideByK(number: newsfeed.viewersCount)
-
-
+        
+        
         return cell
     }
     
-
-
+    
+    
     
     func timeStringFromUnixTime(unixTime: Double) -> String{
         let date = Date(timeIntervalSince1970: unixTime)
@@ -87,13 +86,35 @@ class NewsTVC: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let height = heightCache[indexPath] else { return 400 }
-
+        
         return height
     }
     
-
     
-
+    func tableAndRealmUpdate(){
+        guard let realm = try? Realm() else {return}
+        vkNewsfeeds = realm.objects(VKNewsFeed2.self)
+        notifToken = vkNewsfeeds?.observe {[weak self] (changes: RealmCollectionChange) in
+            guard let tableView = self?.tableView else {return}
+            switch changes{
+            case .initial:
+                tableView.reloadData()
+                break
+            case .update(_, deletions: let deletions, insertions: let insertion, modifications: let modifications):
+                tableView.beginUpdates()
+                tableView.insertRows(at: insertion.map({IndexPath(row: $0, section: 0)}), with: .fade)
+                tableView.deleteRows(at: deletions.map({IndexPath(row: $0, section: 0)}), with: .fade)
+                tableView.reloadRows(at: modifications.map({IndexPath(row: $0, section: 0)}), with: .fade)
+                tableView.endUpdates()
+                break
+            case .error(let error):
+                fatalError("\(error)")
+                break
+            }
+        }
+    }
+    
+    
     
 }
 
