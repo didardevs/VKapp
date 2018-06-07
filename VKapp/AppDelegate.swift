@@ -11,6 +11,7 @@ import Firebase
 import RealmSwift
 import UserNotifications
 import WatchConnectivity
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             wcSession?.delegate = self
             wcSession?.activate()
         }
-        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-4235772458712584/7482421939")
         application.registerForRemoteNotifications()
         return true
     }

@@ -1,21 +1,25 @@
 //
-//  NewsTVC.swift
+//  NewsVTC.swift
 //  VKapp
 //
-//  Created by Didar Naurzbayev on 3/26/18.
+//  Created by Didar Naurzbayev on 6/7/18.
 //  Copyright © 2018 Didar Naurzbayev. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
-class NewsTVC: UITableViewController {
+class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GADBannerViewDelegate {
+    @IBOutlet weak var table: UITableView!
     
     var vkService = GetNews()
     var vkNewsfeeds: Results<VKNewsFeed2>?
     var notifToken: NotificationToken?
     var heightCache: [IndexPath : CGFloat] = [:]
     let accessToken = UserDefaults.standard.string(forKey: "token")
+
+    @IBOutlet weak var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +27,25 @@ class NewsTVC: UITableViewController {
         
         tableAndRealmUpdate()
         vkService.getAllPosts()
+        table.dataSource = self
+        table.delegate = self
+
+        bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerView.rootViewController = self
+        bannerView.load(request)
+        
     }
     
+
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vkNewsfeeds?.count ?? 0
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsID", for: indexPath) as! NewsTVCell
         
         let newsfeed = vkNewsfeeds![indexPath.row]
@@ -84,7 +98,7 @@ class NewsTVC: UITableViewController {
             self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let height = heightCache[indexPath] else { return 400 }
         
         return height
@@ -95,7 +109,7 @@ class NewsTVC: UITableViewController {
         guard let realm = try? Realm() else {return}
         vkNewsfeeds = realm.objects(VKNewsFeed2.self)
         notifToken = vkNewsfeeds?.observe {[weak self] (changes: RealmCollectionChange) in
-            guard let tableView = self?.tableView else {return}
+            guard let tableView = self?.table else {return}
             switch changes{
             case .initial:
                 tableView.reloadData()
@@ -113,16 +127,14 @@ class NewsTVC: UITableViewController {
             }
         }
     }
-    
-    
-    
+
 }
 
-extension NewsTVC: NewsTVCellHeightDelegate{
+extension NewsVTC: NewsTVCellHeightDelegate{
     func setCellHeight(_ height: CGFloat,_ index: IndexPath){
         heightCache[index] = height
-        tableView.beginUpdates()
-        tableView.reloadRows(at: [index], with: .automatic)
-        tableView.endUpdates()
+        table.beginUpdates()
+        table.reloadRows(at: [index], with: .automatic)
+        table.endUpdates()
     }
 }

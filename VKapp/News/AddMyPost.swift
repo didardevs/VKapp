@@ -48,7 +48,6 @@ class AddMyPost: UIViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: "Отправлена", message: "Ваша запись опубликована", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title:"Хорошо", style: .`default`, handler: {
                 (_) in
-//                self?.performSegue(withIdentifier: "backToNews", sender: self)
                 self?.dismiss(animated: false, completion: nil)
             }))
             self?.present(alert, animated: true, completion: nil)

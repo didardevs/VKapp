@@ -11,6 +11,7 @@ import Alamofire
 import WebKit
 import Firebase
 import FirebaseDatabase
+import GoogleMobileAds
 
 let userDefaults = UserDefaults.standard
 var token = ""
@@ -18,7 +19,11 @@ let userAuthCheck = userDefaults.bool(forKey: "Authorised")
 
 let userDefaultes = UserDefaults(suiteName: "group.vkappGroup")
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, GADBannerViewDelegate {
+    
+
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     @IBOutlet weak var webView: WKWebView!{
         didSet{
             webView.navigationDelegate = self
@@ -30,6 +35,12 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displayLogin()
+        
+        bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerView.rootViewController = self
+        bannerView.load(request)
    
     }
     override func viewDidAppear(_ animated: Bool) {
