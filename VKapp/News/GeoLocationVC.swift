@@ -38,9 +38,6 @@ class GeoLocationVC: UIViewController, CLLocationManagerDelegate  {
             let coordinate = CLLocation(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
             let coder = CLGeocoder()
             coder.reverseGeocodeLocation(coordinate) {(myPlaces,Error) -> Void in
-                if let place = myPlaces?.first {
-                    print(place.locality!)
-                }
             }
             let currentRadius: CLLocationDistance = 500
             let currentRegion = MKCoordinateRegionMakeWithDistance((currentLocation), currentRadius * 2.0, currentRadius * 2.0)
@@ -48,25 +45,7 @@ class GeoLocationVC: UIViewController, CLLocationManagerDelegate  {
             self.mapView.showsUserLocation = true
         }
     }
-    private func setupBannerView(_ bannerView: GADBannerView) {
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerView)
-        let guide = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            guide.leftAnchor.constraint(equalTo: bannerView.leftAnchor),
-            guide.rightAnchor.constraint(equalTo: bannerView.rightAnchor),
-            guide.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor)
-            ])
-    }
-    
-    private func bannerViewSetup() {
-        
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        setupBannerView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-    }
+
     
     func navigationBarSetUp(){
         self.navigationItem.title = "Геолокация"

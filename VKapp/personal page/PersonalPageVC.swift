@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import GoogleMobileAds
 
 class PersonalPageVC: UIViewController {
     
@@ -23,9 +24,7 @@ class PersonalPageVC: UIViewController {
     
     let vkuseid = userDefaults.string(forKey: "userID")
     
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +44,8 @@ class PersonalPageVC: UIViewController {
                 self?.friendCount.text = friendNum
             }
         }
+        
+
     }
     
     

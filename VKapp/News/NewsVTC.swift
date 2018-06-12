@@ -8,9 +8,9 @@
 
 import UIKit
 import RealmSwift
-import GoogleMobileAds
 
-class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GADBannerViewDelegate {
+
+class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var table: UITableView!
     
     var vkService = GetNews()
@@ -18,6 +18,8 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
     var notifToken: NotificationToken?
     var heightCache: [IndexPath : CGFloat] = [:]
     let accessToken = UserDefaults.standard.string(forKey: "token")
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +30,6 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
         table.dataSource = self
         table.delegate = self
 
-
-        
     }
     
 
