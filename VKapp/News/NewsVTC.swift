@@ -19,7 +19,7 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
     var heightCache: [IndexPath : CGFloat] = [:]
     let accessToken = UserDefaults.standard.string(forKey: "token")
     
-    var bannerView: GADBannerView!
+ 
     
     
     override func viewDidLoad() {
@@ -30,30 +30,12 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
         vkService.getAllPosts()
         table.dataSource = self
         table.delegate = self
-        
-        bannerViewSetup()
+
+
         
     }
     
-    private func setupBannerView(_ bannerView: GADBannerView) {
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerView)
-        let guide = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            guide.leftAnchor.constraint(equalTo: bannerView.leftAnchor),
-            guide.rightAnchor.constraint(equalTo: bannerView.rightAnchor),
-            guide.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor)
-            ])
-    }
-    
-    private func bannerViewSetup() {
-        
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        setupBannerView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vkNewsfeeds?.count ?? 0
@@ -117,7 +99,7 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
         return height
     }
     
-    
+
     func tableAndRealmUpdate(){
         guard let realm = try? Realm() else {return}
         vkNewsfeeds = realm.objects(VKNewsFeed2.self)
