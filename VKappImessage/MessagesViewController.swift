@@ -28,21 +28,21 @@ class MessagesViewController: MSMessagesAppViewController {
             }
             
         }
-
+        
     }
     
-
+    
     
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
-
+        
     }
     
     override func didResignActive(with conversation: MSConversation) {
         
     }
-   
+    
     override func didReceive(_ message: MSMessage, conversation: MSConversation) {
         
     }
@@ -52,17 +52,17 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {
-       
+        
     }
     
     override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-       
+        
     }
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-       
+        
     }
-
+    
 }
 
 
@@ -76,7 +76,7 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageTableViewCell
         
         let newsfeed = vkNewsfeeds[indexPath.row]
-        print(newsfeed)
+        
         cell.nameLabel.text = newsfeed.postOwner
         cell.postTextLabel.text = newsfeed.postText
         cell.imageV.sd_setImage(with: URL(string:newsfeed.ownerIcon))
@@ -89,7 +89,7 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate{
         let message = MSMessage()
         let layout = MSMessageTemplateLayout()
         layout.caption = post.postText
- 
+        
         layout.imageTitle = post.postOwner
         let image = post.postImage
         if image != "" {

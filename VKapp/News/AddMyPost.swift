@@ -9,13 +9,14 @@
 import UIKit
 import SwiftyJSON
 
-class AddMyPost: UIViewController, UITextFieldDelegate {
+class AddMyPost: UIViewController, UITextViewDelegate {
     
     @IBOutlet var postToolBar: UIToolbar!
-    @IBOutlet weak var messageTextField: UITextField!
+    
+    @IBOutlet weak var messageTextView: UITextView!
     let vkUserId = userDefaults.string(forKey: "userID")
     
-    var vkService = VKServices()
+    var vkService = GetNews()
     
     var myLocation : (lat: Double, long: Double) = (0.0, 0.0)
     
@@ -23,18 +24,14 @@ class AddMyPost: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Готово", style: .done, target: self, action: #selector(addMyPost))
-        
-
-        
-        messageTextField.inputAccessoryView = postToolBar
-        messageTextField.becomeFirstResponder()
-        messageTextField.delegate = self
-        messageTextField.attributedPlaceholder = NSAttributedString(string: "Что у Вас нового?",
-                                                                    attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+        messageTextView.inputAccessoryView = postToolBar
+        messageTextView.becomeFirstResponder()
+        messageTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        messageTextField.becomeFirstResponder()
+        messageTextView.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +40,7 @@ class AddMyPost: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addMyPost(){
-        vkService.newVkPost(message: messageTextField.text!, latitude: myLocation.lat, longitude: myLocation.long, completion: {
+        vkService.newVkPost(message: messageTextView.text!, latitude: myLocation.lat, longitude: myLocation.long, completion: {
             [weak self] in
             let alert = UIAlertController(title: "Отправлена", message: "Ваша запись опубликована", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title:"Хорошо", style: .`default`, handler: {
@@ -52,8 +49,6 @@ class AddMyPost: UIViewController, UITextFieldDelegate {
             }))
             self?.present(alert, animated: true, completion: nil)
         })
-
-        
     }
     
     @IBAction func backToPost(unwindSegue: UIStoryboardSegue) {
@@ -62,6 +57,22 @@ class AddMyPost: UIViewController, UITextFieldDelegate {
             myLocation = (geoLocVC.lat, geoLocVC.long)
         }
     }
-
-
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textChecker(messageTextView)
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        textChecker(messageTextView)
+    }
+    
+    
+    func textChecker(_ textView: UITextView) {
+        if !textView.text.isEmpty {
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        } else {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        }
+    }
+    
 }

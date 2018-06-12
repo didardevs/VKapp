@@ -16,17 +16,17 @@ class VKNotification {
     func postNotification() {
         
         let ace = userDefaults.integer(forKey: "requestsCount")
-            content.title = ""
-            content.body = "You have \(ace) new follower(s)"
-            content.sound = .default()
-            
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let requestIndentifier = "friend"
-            let request = UNNotificationRequest(identifier: requestIndentifier, content: content, trigger: trigger)
-            
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: {(error) in
-                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [requestIndentifier])
-            })
+        content.title = ""
+        content.body = "You have \(ace) new follower(s)"
+        content.sound = .default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let requestIndentifier = "friend"
+        let request = UNNotificationRequest(identifier: requestIndentifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: {(error) in
+            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [requestIndentifier])
+        })
         
     }
 }

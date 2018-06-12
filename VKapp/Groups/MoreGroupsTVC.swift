@@ -33,7 +33,7 @@ class MoreGroupsTVC: UITableViewController, UISearchControllerDelegate, UISearch
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchedGroup.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupsCell", for: indexPath) as! MoreGroupsTVCCell

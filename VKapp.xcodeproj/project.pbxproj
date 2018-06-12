@@ -29,7 +29,6 @@
 		5F8FC8C6207F5BF500DC116D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8FC8C5207F5BF500DC116D /* RealmSwift.framework */; };
 		5F8FC8C8207F5BF500DC116D /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8FC8C7207F5BF500DC116D /* SDWebImage.framework */; };
 		5F8FC8CA207F5BF500DC116D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8FC8C9207F5BF500DC116D /* SwiftyJSON.framework */; };
-		5F8FC8D1207F5C7100DC116D /* ConverstationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8CB207F5C7000DC116D /* ConverstationsCell.swift */; };
 		5F8FC8D5207F5C7100DC116D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8CF207F5C7000DC116D /* LoginVC.swift */; };
 		5F8FC8DD207F5C8F00DC116D /* LoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8D9207F5C8E00DC116D /* LoadOperation.swift */; };
 		5F8FC8DE207F5C8F00DC116D /* LabelFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DA207F5C8F00DC116D /* LabelFrame.swift */; };
@@ -45,9 +44,9 @@
 		5F8FC8F2207F5CD800DC116D /* GroupsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8EE207F5CD700DC116D /* GroupsTVCell.swift */; };
 		5F8FC8FA207F5D0200DC116D /* NewsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8F8207F5D0200DC116D /* NewsTVCell.swift */; };
 		5F8FC900207F757700DC116D /* GroupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8FF207F757700DC116D /* GroupRequest.swift */; };
-		5F8FC902207F986500DC116D /* ConversationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC901207F986500DC116D /* ConversationsTVC.swift */; };
 		5FBC4E2720865BE10090813E /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC4E2620865BE10090813E /* NewsRequest.swift */; };
 		5FBC4E2A208687400090813E /* PostCellHeightDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */; };
+		5FD3177520CBE83C00E32143 /* PersonalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD3177420CBE83C00E32143 /* PersonalPageVC.swift */; };
 		5FE35FCE20C7B9700074680B /* MyClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */; };
 		5FE35FCF20C7B9700074680B /* MyClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */; };
 		5FE35FD620C7B9A80074680B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE35FD420C7B9A80074680B /* Interface.storyboard */; };
@@ -165,7 +164,6 @@
 		5F8FC8C5207F5BF500DC116D /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FC8C7207F5BF500DC116D /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FC8C9207F5BF500DC116D /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F8FC8CB207F5C7000DC116D /* ConverstationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverstationsCell.swift; sourceTree = "<group>"; };
 		5F8FC8CF207F5C7000DC116D /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5F8FC8D9207F5C8E00DC116D /* LoadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadOperation.swift; sourceTree = "<group>"; };
 		5F8FC8DA207F5C8F00DC116D /* LabelFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFrame.swift; sourceTree = "<group>"; };
@@ -181,9 +179,9 @@
 		5F8FC8EE207F5CD700DC116D /* GroupsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTVCell.swift; sourceTree = "<group>"; };
 		5F8FC8F8207F5D0200DC116D /* NewsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTVCell.swift; sourceTree = "<group>"; };
 		5F8FC8FF207F757700DC116D /* GroupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRequest.swift; sourceTree = "<group>"; };
-		5F8FC901207F986500DC116D /* ConversationsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsTVC.swift; sourceTree = "<group>"; };
 		5FBC4E2620865BE10090813E /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellHeightDelegate.swift; sourceTree = "<group>"; };
+		5FD3177420CBE83C00E32143 /* PersonalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPageVC.swift; sourceTree = "<group>"; };
 		5FE35FD220C7B9A70074680B /* VKappWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKappWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE35FD520C7B9A80074680B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		5FE35FD720C7B9AB0074680B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				5F38651D2084C1C000B3ABA3 /* FirebaseService.swift */,
-				5FBC4E28208687280090813E /* protocol */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -316,10 +313,10 @@
 				5F7ECA2120AD4621009B236E /* AppNotifications.swift */,
 				5F8FC8FE207F755A00DC116D /* VKRequests */,
 				5F8FC8E1207F5CA000DC116D /* Services */,
+				5FD3177620CBF20900E32143 /* personal page */,
 				5F8FC8F3207F5CE700DC116D /* Groups */,
 				5F8FC8EA207F5CC500DC116D /* Friends */,
 				5F8FC8FC207F5D2D00DC116D /* News */,
-				5F8FC8FD207F5D3400DC116D /* Messages */,
 				5F38651C2084C1A500B3ABA3 /* Firebase */,
 				5F74574D207F3BAA00F0825B /* Main.storyboard */,
 				5F745750207F3BAB00F0825B /* Assets.xcassets */,
@@ -333,6 +330,7 @@
 		5F8FC8E1207F5CA000DC116D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */,
 				5F8FC8DA207F5C8F00DC116D /* LabelFrame.swift */,
 				5F8FC8D9207F5C8E00DC116D /* LoadOperation.swift */,
 				5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */,
@@ -365,21 +363,12 @@
 		5F8FC8FC207F5D2D00DC116D /* News */ = {
 			isa = PBXGroup;
 			children = (
+				5F466A4E20C963DF00CCF012 /* NewsVTC.swift */,
 				5F8FC8F8207F5D0200DC116D /* NewsTVCell.swift */,
 				5F7EE43E20A9949600D740A4 /* AddMyPost.swift */,
 				5F7EE44220A9BAF900D740A4 /* GeoLocationVC.swift */,
-				5F466A4E20C963DF00CCF012 /* NewsVTC.swift */,
 			);
 			path = News;
-			sourceTree = "<group>";
-		};
-		5F8FC8FD207F5D3400DC116D /* Messages */ = {
-			isa = PBXGroup;
-			children = (
-				5F8FC8CB207F5C7000DC116D /* ConverstationsCell.swift */,
-				5F8FC901207F986500DC116D /* ConversationsTVC.swift */,
-			);
-			path = Messages;
 			sourceTree = "<group>";
 		};
 		5F8FC8FE207F755A00DC116D /* VKRequests */ = {
@@ -392,12 +381,12 @@
 			path = VKRequests;
 			sourceTree = "<group>";
 		};
-		5FBC4E28208687280090813E /* protocol */ = {
+		5FD3177620CBF20900E32143 /* personal page */ = {
 			isa = PBXGroup;
 			children = (
-				5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */,
+				5FD3177420CBE83C00E32143 /* PersonalPageVC.swift */,
 			);
-			path = protocol;
+			path = "personal page";
 			sourceTree = "<group>";
 		};
 		5FE35FD320C7B9A80074680B /* VKappWatch */ = {
@@ -835,7 +824,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F7EE43F20A9949600D740A4 /* AddMyPost.swift in Sources */,
-				5F8FC902207F986500DC116D /* ConversationsTVC.swift in Sources */,
 				5F8FC8F0207F5CD800DC116D /* MoreGroupsTVC.swift in Sources */,
 				5F8FC8E0207F5C8F00DC116D /* VKServices.swift in Sources */,
 				5F8FC8E7207F5CB500DC116D /* FriendPhotosCVCCell.swift in Sources */,
@@ -855,8 +843,8 @@
 				5F8FC8DD207F5C8F00DC116D /* LoadOperation.swift in Sources */,
 				5F74574A207F3BAA00F0825B /* AppDelegate.swift in Sources */,
 				5F8FC8EF207F5CD800DC116D /* MoreGroupsTVCCell.swift in Sources */,
+				5FD3177520CBE83C00E32143 /* PersonalPageVC.swift in Sources */,
 				5F8FC8F1207F5CD800DC116D /* GroupsTableView.swift in Sources */,
-				5F8FC8D1207F5C7100DC116D /* ConverstationsCell.swift in Sources */,
 				5F8FC8D5207F5C7100DC116D /* LoginVC.swift in Sources */,
 				5F8FC8FA207F5D0200DC116D /* NewsTVCell.swift in Sources */,
 			);

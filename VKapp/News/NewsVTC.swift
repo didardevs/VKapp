@@ -18,8 +18,9 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
     var notifToken: NotificationToken?
     var heightCache: [IndexPath : CGFloat] = [:]
     let accessToken = UserDefaults.standard.string(forKey: "token")
-
-    @IBOutlet weak var bannerView: GADBannerView!
+    
+    var bannerView: GADBannerView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +30,30 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
         vkService.getAllPosts()
         table.dataSource = self
         table.delegate = self
-
-        bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        bannerView.rootViewController = self
-        bannerView.load(request)
+        
+        bannerViewSetup()
         
     }
     
-
+    private func setupBannerView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        let guide = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            guide.leftAnchor.constraint(equalTo: bannerView.leftAnchor),
+            guide.rightAnchor.constraint(equalTo: bannerView.rightAnchor),
+            guide.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor)
+            ])
+    }
+    
+    private func bannerViewSetup() {
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        setupBannerView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vkNewsfeeds?.count ?? 0
@@ -58,8 +73,6 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
         cell.commentsLabel.text = divideByK(number: newsfeed.commentsCount)
         cell.sharesLabel.text = divideByK(number: newsfeed.repostCount)
         cell.viewersLabel.text = divideByK(number: newsfeed.viewersCount)
-        
-        
         return cell
     }
     
@@ -98,7 +111,7 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
             self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }
     }
-     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let height = heightCache[indexPath] else { return 400 }
         
         return height
@@ -127,7 +140,7 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
             }
         }
     }
-
+    
 }
 
 extension NewsVTC: NewsTVCellHeightDelegate{

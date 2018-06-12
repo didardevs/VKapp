@@ -9,7 +9,7 @@
 import UIKit
 
 class FriendsTVCCell: UITableViewCell {
-
+    
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellNameLabel: UILabel!
     let makeLabelFrame = LabelFrame()
@@ -19,7 +19,7 @@ class FriendsTVCCell: UITableViewCell {
         cellImage.translatesAutoresizingMaskIntoConstraints = false
         cellNameLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -29,7 +29,7 @@ class FriendsTVCCell: UITableViewCell {
         cellNameLabelFrame()
         
     }
-
+    
     func cellImageFrame(){
         
         let iconSizeLength: CGFloat = 60

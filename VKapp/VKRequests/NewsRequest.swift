@@ -63,6 +63,21 @@ class GetNews{
         }
     }
     
+    func newVkPost(message: String, latitude: Double?, longitude: Double?, completion: @escaping () -> Void) {
+        let myParameters: Parameters = [
+            "message" : message,
+            "lat" : latitude ?? 0,
+            "long" : longitude ?? 0,
+            "v" : version,
+            "access_token" : token!
+        ]
+        let postUrl = "https://api.vk.com/method/wall.post"
+        
+        Alamofire.request(postUrl, parameters: myParameters).responseJSON(completionHandler: { response in
+            completion()
+        })
+    }
+    
     func getAllPosts(countN: Int = 200){
         let path = "newsfeed.get"
         

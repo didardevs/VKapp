@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
             if granted == true {
-                print("Доступ разрешен")
+                
             }
             if let error = error {
                 print(error.localizedDescription)
@@ -71,9 +71,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        print("Вызов обновления даных в фоновом режиме\(Date())")
         if lastUpdate != nil, abs(lastUpdate!.timeIntervalSinceNow) < 30 {
-            print("Фоновое обновление не требуется и т.к. крайний раз данные обновлялись \(abs(lastUpdate!.timeIntervalSinceNow)) cекунд назад (меньше 30) ")
+            
             completionHandler(.noData)
             return
         }
@@ -81,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         fetchFriendRequest.enter()
         VKServices.shared.getFriendRequests { requests, error in
             if  requests != nil {
-                print("Заявки в друзья загружены в фоновом режиме")
+                
                 completionHandler(.newData)
                 
                 DispatchQueue.main.async {
@@ -95,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         fetchFriendRequest.notify(queue: DispatchQueue.main) {
-            print("Все данные загружены в фоне")
+            
             timer = nil
             lastUpdate = Date()
             completionHandler(.newData)
@@ -105,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         timer = DispatchSource.makeTimerSource(queue: DispatchQueue.main)
         timer?.schedule(deadline: .now() + 29, leeway: .seconds(1))
         timer?.setEventHandler(handler: {
-            print("Говорим системе, что не упели загрузить данные")
+            
             fetchFriendRequest.suspend()
             
             completionHandler(.failed)

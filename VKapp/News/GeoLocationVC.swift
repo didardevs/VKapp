@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import GoogleMobileAds
 
 class GeoLocationVC: UIViewController, CLLocationManagerDelegate  {
     
@@ -16,27 +17,22 @@ class GeoLocationVC: UIViewController, CLLocationManagerDelegate  {
     let locationManager = CLLocationManager()
     var lat = 0.0
     var long = 0.0
-    
+    var bannerView: GADBannerView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
-        
-        
-
-        
+        self.locationManager.startUpdatingLocation()    
     }
-
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let currentLocation = locations.last?.coordinate {
-            print(currentLocation)
+            
             
             lat = currentLocation.latitude
             long = currentLocation.longitude
-           
             
             let coordinate = CLLocation(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
             let coder = CLGeocoder()
@@ -49,8 +45,26 @@ class GeoLocationVC: UIViewController, CLLocationManagerDelegate  {
             let currentRegion = MKCoordinateRegionMakeWithDistance((currentLocation), currentRadius * 2.0, currentRadius * 2.0)
             self.mapView.setRegion(currentRegion, animated: true)
             self.mapView.showsUserLocation = true
-            
         }
     }
-
+    private func setupBannerView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        let guide = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            guide.leftAnchor.constraint(equalTo: bannerView.leftAnchor),
+            guide.rightAnchor.constraint(equalTo: bannerView.rightAnchor),
+            guide.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor)
+            ])
+    }
+    
+    private func bannerViewSetup() {
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        setupBannerView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
+    
 }

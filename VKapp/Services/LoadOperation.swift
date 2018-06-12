@@ -51,16 +51,16 @@ class GetCachedImages: Operation{
         saveImageToCache()
     }
     private func getImageFromCache() -> Bool {
-
-                guard let fileName = filePath,
-                    let info = try? FileManager.default.attributesOfItem(atPath: fileName),
-                    let modificationDate = info[FileAttributeKey.modificationDate] as? Date else { return false }
         
-                let lifeTime = Date().timeIntervalSince(modificationDate)
+        guard let fileName = filePath,
+            let info = try? FileManager.default.attributesOfItem(atPath: fileName),
+            let modificationDate = info[FileAttributeKey.modificationDate] as? Date else { return false }
         
-                guard lifeTime <= cacheLifeTime,
-                    let image = UIImage(contentsOfFile: fileName) else { return false }
- 
+        let lifeTime = Date().timeIntervalSince(modificationDate)
+        
+        guard lifeTime <= cacheLifeTime,
+            let image = UIImage(contentsOfFile: fileName) else { return false }
+        
         
         self.outputImage = image
         return true

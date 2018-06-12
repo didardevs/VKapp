@@ -15,7 +15,7 @@ class FriendsTVC: UITableViewController {
     let vkUserId = userDefaults.string(forKey: "userID")
     var friendVK: Results<Friend>?
     var notifToken: NotificationToken?
-   
+    
     
     let queueForImage: OperationQueue = {
         let queue = OperationQueue()
@@ -29,7 +29,7 @@ class FriendsTVC: UITableViewController {
         tableAndRealmUpdate()
         vkService.getMyFriends(vkUserID : vkUserId!)
     }
-
+    
     func tableAndRealmUpdate(){
         guard let realm = try? Realm() else { return }
         friendVK = realm.objects(Friend.self)
@@ -76,7 +76,7 @@ class FriendsTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85.0
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "friendsAllPhotos", let friendPhotoVCV = segue.destination as? FriendPhotosCVC,

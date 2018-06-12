@@ -21,7 +21,7 @@ let userDefaultes = UserDefaults(suiteName: "group.vkappGroup")
 
 class LoginVC: UIViewController, GADBannerViewDelegate {
     
-
+    
     @IBOutlet weak var bannerView: GADBannerView!
     
     @IBOutlet weak var webView: WKWebView!{
@@ -41,18 +41,18 @@ class LoginVC: UIViewController, GADBannerViewDelegate {
         request.testDevices = [kGADSimulatorID]
         bannerView.rootViewController = self
         bannerView.load(request)
-   
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         if userDefaults.bool(forKey: "Authorised"){
             performSegue(withIdentifier: "loginComplete", sender: nil)
         }
     }
-//    func checkAuth(){
-//        if userAuthorised{
-//
-//        }
-//    }
+    //    func checkAuth(){
+    //        if userAuthorised{
+    //
+    //        }
+    //    }
     
     func displayLogin(){
         
@@ -93,19 +93,19 @@ extension LoginVC: WKNavigationDelegate {
             userDefaults.set(params["user_id"], forKey: "userID")
             userDefaults.set(true, forKey: "Authorised")
             performSegue(withIdentifier: "loginComplete", sender: nil)
-
+            
             userDefaultes?.set(token, forKey: "AccessToken")
             let userID = userDefaults.string(forKey: "userID")
-        let firebase = FirebaseService()
+            let firebase = FirebaseService()
             firebase.saveUserToFB(userID: userID!)
-
+            
             
         } else {
-           userDefaults.set(false, forKey: "Authorised")
+            userDefaults.set(false, forKey: "Authorised")
         }
-
+        
         decisionHandler(.cancel)
-       
+        
     }
 }
 

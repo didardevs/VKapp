@@ -48,7 +48,7 @@ class GroupsTableView: UITableViewController {
         queueForImage.addOperation(getCachedImage)
         OperationQueue.main.addOperation(setImageToCell)
         
-
+        
         cell.cellLabel.text = group?.groupName
         return cell
     }
@@ -56,24 +56,24 @@ class GroupsTableView: UITableViewController {
         return 85.0
     }
     func tableAndRealmUpdate(){
-            guard let realm = try? Realm() else { return }
-            groupsVK = realm.objects(Group.self)
-            notifToken = groupsVK?.observe { [weak self] (changes: RealmCollectionChange) in
-                
-                switch changes {
-                case .initial:
-                    self?.tableView.reloadData()
-                case .update(_, let delete, let insert, let update):
-                    self?.tableView.beginUpdates()
-                    self?.tableView.insertRows(at: insert.map({ IndexPath(row: $0, section: 0) }), with: .none)
-                    self?.tableView.deleteRows(at: delete.map({ IndexPath(row: $0, section: 0) }), with: .none)
-                    self?.tableView.reloadRows(at: update.map({ IndexPath(row: $0, section: 0) }), with: .none)
-                    self?.tableView.endUpdates()
-                    break
-                case .error(let error):
-                    fatalError("\(error)")
-                    break
-                }
+        guard let realm = try? Realm() else { return }
+        groupsVK = realm.objects(Group.self)
+        notifToken = groupsVK?.observe { [weak self] (changes: RealmCollectionChange) in
+            
+            switch changes {
+            case .initial:
+                self?.tableView.reloadData()
+            case .update(_, let delete, let insert, let update):
+                self?.tableView.beginUpdates()
+                self?.tableView.insertRows(at: insert.map({ IndexPath(row: $0, section: 0) }), with: .none)
+                self?.tableView.deleteRows(at: delete.map({ IndexPath(row: $0, section: 0) }), with: .none)
+                self?.tableView.reloadRows(at: update.map({ IndexPath(row: $0, section: 0) }), with: .none)
+                self?.tableView.endUpdates()
+                break
+            case .error(let error):
+                fatalError("\(error)")
+                break
+            }
         }
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -92,14 +92,14 @@ class GroupsTableView: UITableViewController {
                 if !(groupsVK?.contains(where: { $0.id == newGroup.id } ))! {
                     vkService.joinGroup(groupID: newGroup.id)
                     Realm.newDataToRealm(objects: [newGroup])
-
-//                    let application = UIApplication.shared
-//
-//                    DispatchQueue.main.async {
-//                        application.applicationIconBadgeNumber =
-//                            userDefaults.integer(forKey: "newgroupCount")
-//                    }
-//                    
+                    
+                    //                    let application = UIApplication.shared
+                    //
+                    //                    DispatchQueue.main.async {
+                    //                        application.applicationIconBadgeNumber =
+                    //                            userDefaults.integer(forKey: "newgroupCount")
+                    //                    }
+                    //                    
                     let firebase = FirebaseService()
                     firebase.saveUsersGroups(group: newGroup)
                 }
@@ -117,7 +117,7 @@ class GroupsTableView: UITableViewController {
         }
     }
     
-
-
+    
+    
 }
 

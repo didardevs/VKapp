@@ -9,10 +9,10 @@
 import UIKit
 
 class GroupsTVCell: UITableViewCell {
-
+    
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
-
+    
     let makeLabelFrame = LabelFrame()
     let insets : CGFloat = 15.0
     override func awakeFromNib() {
@@ -20,19 +20,19 @@ class GroupsTVCell: UITableViewCell {
         super.awakeFromNib()
         cellImage.translatesAutoresizingMaskIntoConstraints = false
         cellLabel.translatesAutoresizingMaskIntoConstraints = false
-
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         cellImageFrame()
         groupLabelFrame()
-
+        
     }
     
     func cellImageFrame(){

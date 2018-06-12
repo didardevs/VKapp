@@ -46,7 +46,7 @@ class Friend : Object{
 class Follower : Object{
     @objc dynamic var id = 0
     @objc dynamic var friendFullName = ""
-
+    
     convenience init(json: JSON){
         self.init()
         self.id = json["id"].intValue
@@ -66,11 +66,28 @@ class VKFriendsPhoto{
 }
 
 
-
+class PersonalModel{
+    var fullName = ""
+    var status = ""
+    var counters = [String: Int]()
+    
+    var userImage = ""
+    
+    convenience init (json: JSON){
+        self.init()
+        fullName = json["first_name"].stringValue + " " + json["last_name"].stringValue
+        status = json["status"].stringValue
+        let countersJson = json["counters"].dictionaryValue
+        userImage = json["photo_100"].stringValue
+        for elem in countersJson {
+            self.counters[elem.key] = elem.value.intValue
+        }
+    }
+}
 
 
 class VKMessage {
-
+    
     var conversationID = 0
     var userID = 0
     var messageDate : Double = 0.0

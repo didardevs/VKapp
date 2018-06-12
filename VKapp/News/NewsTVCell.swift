@@ -9,7 +9,7 @@
 import UIKit
 
 class NewsTVCell: UITableViewCell {
-
+    
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timeStamp: UILabel!
@@ -27,7 +27,7 @@ class NewsTVCell: UITableViewCell {
     let insets: CGFloat = 10.0
     let sideInset: CGFloat = 45.0
     var cellHeight: CGFloat?
-
+    
     @IBOutlet weak var likesImage: UIImageView!
     
     @IBOutlet weak var commentsImage: UIImageView!
@@ -37,18 +37,18 @@ class NewsTVCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
     }
-
+    
     override func setNeedsLayout() {
         super.setNeedsLayout()
         [iconImage, nameLabel, timeStamp, postTextLabel, postImage, likesImage, commentsImage, sharedImage, viewersImage, likesLabel, commentsLabel, sharesLabel, viewersLabel, myView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         [iconImage, nameLabel, timeStamp, postTextLabel, postImage, likesImage, commentsImage, sharedImage, viewersImage, likesLabel, commentsLabel, sharesLabel, viewersLabel, myView].forEach { $0?.backgroundColor = .white }
         
     }
-
-
-
+    
+    
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         cellImageFrame()
@@ -66,14 +66,13 @@ class NewsTVCell: UITableViewCell {
         viewersImageFrame()
         viewersLabelFrame()
         cellCurrentHeight()
-        //print("THIS IS SPARTA",cellHeight)
     }
     
     func cellCurrentHeight(){
         cellHeight = 2 * insets + 3 * 4 + iconImage.frame.height + postTextLabel.frame.height + postImage.frame.height + myView.frame.height
         delegate?.setCellHeight(cellHeight!, index!)
     }
- 
+    
     func cellImageFrame(){
         
         let iconSizeLength: CGFloat = 40
@@ -112,7 +111,7 @@ class NewsTVCell: UITableViewCell {
     }
     
     func postImageFrame(){
-
+        
         let iconSizeLength: CGFloat = 208
         let iconSize = CGSize(width: iconSizeLength, height: iconSizeLength)
         let imageX = bounds.midX - iconSizeLength/2
@@ -120,7 +119,7 @@ class NewsTVCell: UITableViewCell {
         let iconOrigin = CGPoint(x: imageX, y: imageY)
         postImage.frame = CGRect(origin: iconOrigin, size: iconSize)
     }
-
+    
     func viewFrame(){
         let viewWidth: CGFloat = 246
         let viewHeight: CGFloat  = 30
@@ -130,7 +129,7 @@ class NewsTVCell: UITableViewCell {
         let viewOrigin = CGPoint(x: insets, y: viewY)
         myView.frame = CGRect(origin: viewOrigin, size: viewSize)
     }
-
+    
     // inside of view
     func likesImageFrame(){
         let imageLength: CGFloat = 20
@@ -196,8 +195,5 @@ class NewsTVCell: UITableViewCell {
         let size = CGSize(width: ceil(width), height: ceil(height))
         return size
     }
-    
-    
-    
     
 }

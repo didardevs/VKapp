@@ -9,7 +9,7 @@
 import UIKit
 
 class MoreGroupsTVCCell: UITableViewCell {
-
+    
     @IBOutlet weak var cellImage: UIImageView!
     
     @IBOutlet weak var groupName: UILabel!
@@ -45,15 +45,15 @@ class MoreGroupsTVCCell: UITableViewCell {
         cellImage.frame = CGRect(origin: iconOrigin, size: iconSize)
         cellImage.layer.cornerRadius = cellImage.frame.height / 2
     }
-
+    
     
     func groupLabelFrame() {
         makeLabelFrame.labelFrame(labelSize: makeLabelFrame.getLabelSize(bounds: bounds, text: groupName.text!, font: groupName.font), label: groupName, labelOriginX: insets + 65, labelOriginY: insets)
     }
     
     func participantLabelFrame(){
-         makeLabelFrame.labelFrame(labelSize: makeLabelFrame.getLabelSize(bounds: bounds, text: groupParticipants.text!, font: groupParticipants.font), label: groupParticipants, labelOriginX: insets + 65, labelOriginY: insets * 3)
+        makeLabelFrame.labelFrame(labelSize: makeLabelFrame.getLabelSize(bounds: bounds, text: groupParticipants.text!, font: groupParticipants.font), label: groupParticipants, labelOriginX: insets + 65, labelOriginY: insets * 3)
     }
-
-
+    
+    
 }

@@ -16,13 +16,13 @@ class FriendPhotosCVCCell: UICollectionViewCell {
     override func awakeFromNib() {
         cellImage.translatesAutoresizingMaskIntoConstraints = false
         super.awakeFromNib()
-       
+        
         
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-       cellImageFrame()
-        }
+        cellImageFrame()
+    }
     
     func cellImageFrame(){
         let iconSizeLength: CGFloat = 100
@@ -30,6 +30,6 @@ class FriendPhotosCVCCell: UICollectionViewCell {
         let iconOrigin = CGPoint(x: bounds.midX - iconSizeLength / 2, y: bounds.midY - iconSizeLength/2)
         cellImage.frame = CGRect(origin: iconOrigin, size: iconSize)
     }
-
+    
 }
 
