@@ -23,7 +23,8 @@ class GeoLocationVC: UIViewController, CLLocationManagerDelegate  {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()    
+        self.locationManager.startUpdatingLocation()
+        navigationBarSetUp()
     }
     
     
@@ -65,6 +66,18 @@ class GeoLocationVC: UIViewController, CLLocationManagerDelegate  {
         bannerView.adUnitID = "ca-app-pub-4235772458712584/7482421939"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+    }
+    
+    func navigationBarSetUp(){
+        self.navigationItem.title = "Геолокация"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
     }
     
 }

@@ -28,6 +28,7 @@ class AddMyPost: UIViewController, UITextViewDelegate {
         messageTextView.inputAccessoryView = postToolBar
         messageTextView.becomeFirstResponder()
         messageTextView.delegate = self
+        navigationBarSetUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +73,18 @@ class AddMyPost: UIViewController, UITextViewDelegate {
             navigationItem.rightBarButtonItem?.isEnabled = true
         } else {
             navigationItem.rightBarButtonItem?.isEnabled = false
+        }
+    }
+    
+    func navigationBarSetUp(){
+        self.navigationItem.title = "Новая запись"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }
     }
     

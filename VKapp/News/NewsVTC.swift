@@ -18,10 +18,7 @@ class NewsVTC: UIViewController, UITableViewDelegate, UITableViewDataSource, GAD
     var notifToken: NotificationToken?
     var heightCache: [IndexPath : CGFloat] = [:]
     let accessToken = UserDefaults.standard.string(forKey: "token")
-    
- 
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetUp()
