@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Firebase
+
 import RealmSwift
 import UserNotifications
 import WatchConnectivity
-import GoogleMobileAds
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,9 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var vkNewsFeed = [[String:String]]()
     var wcSession: WCSession?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        FirebaseApp.configure()
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        window = window ?? UIWindow(frame: UIScreen.main.bounds)
+        let userDefault = UserDefaults.standard
+        
+        if userDefault.bool(forKey: "Authorised"){
+            moveToMainTabVC()
+        } else {
+            self.window?.rootViewController = UINavigationController(rootViewController: LoginVC())
+        }
+        window?.makeKeyAndVisible()
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
             if granted == true {
@@ -39,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             wcSession?.delegate = self
             wcSession?.activate()
         }
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-4235772458712584/7482421939")
+
         application.registerForRemoteNotifications()
         return true
     }
@@ -122,7 +130,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    
+    func moveToMainTabVC(){
+        self.window?.rootViewController = MainTabVC()
+    }
 }
 
 extension AppDelegate: WCSessionDelegate{

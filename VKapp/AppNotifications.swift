@@ -18,7 +18,7 @@ class VKNotification {
         let ace = userDefaults.integer(forKey: "requestsCount")
         content.title = ""
         content.body = "You have \(ace) new follower(s)"
-        content.sound = .default()
+        content.sound = .default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         let requestIndentifier = "friend"

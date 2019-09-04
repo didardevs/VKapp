@@ -6,13 +6,10 @@ target 'VKapp' do
   use_frameworks!
     pod 'Alamofire', '~> 4.6'
     pod 'SwiftyJSON'
-    pod 'SDWebImage', '~> 4.0'
+    pod 'SDWebImage'
     pod 'RealmSwift'
-    pod 'Firebase/Core'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Database'
-    pod 'Firebase/Storage'
-    pod 'Google-Mobile-Ads-SDK'
+
+
 
   # Pods for VKapp
 
@@ -24,7 +21,7 @@ target 'VKappToday' do
     pod 'Alamofire', '~> 4.6'
     pod 'SwiftyJSON'
     pod 'RealmSwift'
-    pod 'SDWebImage', '~> 4.0'
+    pod 'SDWebImage'
     
   # Pods for VKappToday
 
@@ -38,7 +35,7 @@ target 'VKappImessage' do
     pod 'Alamofire', '~> 4.6'
     pod 'SwiftyJSON'
     pod 'RealmSwift'
-    pod 'SDWebImage', '~> 4.0'
+    pod 'SDWebImage'
     
   # Pods for VKappImessage
 

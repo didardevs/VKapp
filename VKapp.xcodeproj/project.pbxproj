@@ -3,23 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		176C54A91C50B27D54F0E22D /* Pods_VKappImessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B52C07CC9BC9C77E1096B8 /* Pods_VKappImessage.framework */; };
-		4E96C7BC3E063742C155C82E /* Pods_VKappToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BCF5FC720939B3E84E25C3 /* Pods_VKappToday.framework */; };
+		1F2FB35B2314F0B0005D74A6 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2FB35A2314F0B0005D74A6 /* Realm.swift */; };
+		1F9385AB231184CE0034FB8F /* ExtensionsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9385AA231184CE0034FB8F /* ExtensionsUI.swift */; };
+		1FA3AFA6231BDEDF0077FAEC /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3AFA5231BDEDF0077FAEC /* UserHeader.swift */; };
+		1FA3AFBF231BE6C70077FAEC /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3AFBE231BE6C70077FAEC /* RequestMethod.swift */; };
+		1FC32F712312EDBA001C7819 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC32F702312EDBA001C7819 /* MainTabVC.swift */; };
+		1FD8FE822314272F004CAB07 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE812314272F004CAB07 /* Group.swift */; };
+		1FD8FE842314274D004CAB07 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE832314274D004CAB07 /* Friend.swift */; };
+		1FD8FE862314276C004CAB07 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE852314276C004CAB07 /* Follower.swift */; };
+		1FD8FE8823142790004CAB07 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE872314278F004CAB07 /* Photo.swift */; };
+		1FD8FE8A231427C7004CAB07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE89231427C7004CAB07 /* User.swift */; };
+		1FD8FE8B231429D7004CAB07 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE812314272F004CAB07 /* Group.swift */; };
+		1FD8FE8C231429D7004CAB07 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE812314272F004CAB07 /* Group.swift */; };
+		1FD8FE8D231429DA004CAB07 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE832314274D004CAB07 /* Friend.swift */; };
+		1FD8FE8E231429DA004CAB07 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8FE832314274D004CAB07 /* Friend.swift */; };
+		1FD96F5B2316DB980015613F /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD96F5A2316DB980015613F /* MapTableViewCell.swift */; };
+		42B25B33E87D65074F426DDB /* Pods_VKappImessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238BD1D66FCC15F3F545C02F /* Pods_VKappImessage.framework */; };
 		5F12273220BC2D420021CC21 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F12273120BC2D420021CC21 /* NotificationCenter.framework */; };
 		5F12273520BC2D420021CC21 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F12273420BC2D420021CC21 /* TodayViewController.swift */; };
 		5F12273820BC2D420021CC21 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F12273620BC2D420021CC21 /* MainInterface.storyboard */; };
 		5F12273C20BC2D420021CC21 /* VKappToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5F12273020BC2D420021CC21 /* VKappToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5F12274320BC37D30021CC21 /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC4E2620865BE10090813E /* NewsRequest.swift */; };
 		5F12274620BC3AF10021CC21 /* TodayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F12274520BC3AF10021CC21 /* TodayViewCell.swift */; };
-		5F38651E2084C1C000B3ABA3 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F38651D2084C1C000B3ABA3 /* FirebaseService.swift */; };
 		5F466A4F20C963DF00CCF012 /* NewsVTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F466A4E20C963DF00CCF012 /* NewsVTC.swift */; };
 		5F466A5120C96A4F00CCF012 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F466A5020C96A4F00CCF012 /* GoogleService-Info.plist */; };
 		5F74574A207F3BAA00F0825B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F745749207F3BAA00F0825B /* AppDelegate.swift */; };
-		5F74574F207F3BAA00F0825B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F74574D207F3BAA00F0825B /* Main.storyboard */; };
 		5F745751207F3BAB00F0825B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F745750207F3BAB00F0825B /* Assets.xcassets */; };
 		5F745754207F3BAB00F0825B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F745752207F3BAB00F0825B /* LaunchScreen.storyboard */; };
 		5F7ECA2220AD4621009B236E /* AppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7ECA2120AD4621009B236E /* AppNotifications.swift */; };
@@ -30,9 +42,6 @@
 		5F8FC8C8207F5BF500DC116D /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8FC8C7207F5BF500DC116D /* SDWebImage.framework */; };
 		5F8FC8CA207F5BF500DC116D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8FC8C9207F5BF500DC116D /* SwiftyJSON.framework */; };
 		5F8FC8D5207F5C7100DC116D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8CF207F5C7000DC116D /* LoginVC.swift */; };
-		5F8FC8DD207F5C8F00DC116D /* LoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8D9207F5C8E00DC116D /* LoadOperation.swift */; };
-		5F8FC8DE207F5C8F00DC116D /* LabelFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DA207F5C8F00DC116D /* LabelFrame.swift */; };
-		5F8FC8DF207F5C8F00DC116D /* MyClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */; };
 		5F8FC8E0207F5C8F00DC116D /* VKServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DC207F5C8F00DC116D /* VKServices.swift */; };
 		5F8FC8E6207F5CB500DC116D /* FriendsTVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8E2207F5CB400DC116D /* FriendsTVCCell.swift */; };
 		5F8FC8E7207F5CB500DC116D /* FriendPhotosCVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8E3207F5CB400DC116D /* FriendPhotosCVCCell.swift */; };
@@ -45,10 +54,7 @@
 		5F8FC8FA207F5D0200DC116D /* NewsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8F8207F5D0200DC116D /* NewsTVCell.swift */; };
 		5F8FC900207F757700DC116D /* GroupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8FF207F757700DC116D /* GroupRequest.swift */; };
 		5FBC4E2720865BE10090813E /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC4E2620865BE10090813E /* NewsRequest.swift */; };
-		5FBC4E2A208687400090813E /* PostCellHeightDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */; };
 		5FD3177520CBE83C00E32143 /* PersonalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD3177420CBE83C00E32143 /* PersonalPageVC.swift */; };
-		5FE35FCE20C7B9700074680B /* MyClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */; };
-		5FE35FCF20C7B9700074680B /* MyClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */; };
 		5FE35FD620C7B9A80074680B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE35FD420C7B9A80074680B /* Interface.storyboard */; };
 		5FE35FD820C7B9AB0074680B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE35FD720C7B9AB0074680B /* Assets.xcassets */; };
 		5FE35FDF20C7B9AC0074680B /* VKappWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5FE35FDE20C7B9AC0074680B /* VKappWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -65,7 +71,8 @@
 		5FE7BDA020BDB4B70099A970 /* VKappImessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5FE7BD9220BDB4B30099A970 /* VKappImessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5FE7BDA620BDB72A0099A970 /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC4E2620865BE10090813E /* NewsRequest.swift */; };
 		5FE7BDA820BDB9F60099A970 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7BDA720BDB9F60099A970 /* MessageTableViewCell.swift */; };
-		72CE7AC4644EA76203E41661 /* Pods_VKapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86606BF1F58127E7D91ABE46 /* Pods_VKapp.framework */; };
+		86C5FED25F0615A8113D70DD /* Pods_VKapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2868B95EBFAF170666AC6CF8 /* Pods_VKapp.framework */; };
+		E6707818B5677D1D233AE6A1 /* Pods_VKappToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333750C2D569F25847DB781 /* Pods_VKappToday.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,9 +144,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3D8A7AACD972E1AA64AEF15F /* Pods-VKappImessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappImessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKappImessage/Pods-VKappImessage.debug.xcconfig"; sourceTree = "<group>"; };
-		50416D29405B067211FD299D /* Pods-VKappToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKappToday/Pods-VKappToday.debug.xcconfig"; sourceTree = "<group>"; };
-		50B52C07CC9BC9C77E1096B8 /* Pods_VKappImessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKappImessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		085903006EC312B48765945E /* Pods-VKappToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappToday.release.xcconfig"; path = "Target Support Files/Pods-VKappToday/Pods-VKappToday.release.xcconfig"; sourceTree = "<group>"; };
+		1030B734595CF1BBD95273B4 /* Pods-VKapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKapp.release.xcconfig"; path = "Target Support Files/Pods-VKapp/Pods-VKapp.release.xcconfig"; sourceTree = "<group>"; };
+		1333750C2D569F25847DB781 /* Pods_VKappToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKappToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2FB35A2314F0B0005D74A6 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		1F9385AA231184CE0034FB8F /* ExtensionsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsUI.swift; sourceTree = "<group>"; };
+		1FA3AFA5231BDEDF0077FAEC /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
+		1FA3AFBE231BE6C70077FAEC /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		1FC32F702312EDBA001C7819 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
+		1FD8FE812314272F004CAB07 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		1FD8FE832314274D004CAB07 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		1FD8FE852314276C004CAB07 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		1FD8FE872314278F004CAB07 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		1FD8FE89231427C7004CAB07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1FD96F5A2316DB980015613F /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		238BD1D66FCC15F3F545C02F /* Pods_VKappImessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKappImessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B3EB42904C075616D1FF16 /* Pods-VKappImessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappImessage.debug.xcconfig"; path = "Target Support Files/Pods-VKappImessage/Pods-VKappImessage.debug.xcconfig"; sourceTree = "<group>"; };
+		2868B95EBFAF170666AC6CF8 /* Pods_VKapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F12273020BC2D420021CC21 /* VKappToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VKappToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F12273120BC2D420021CC21 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		5F12273420BC2D420021CC21 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -148,12 +169,10 @@
 		5F12274120BC2DB90021CC21 /* VKapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VKapp.entitlements; sourceTree = "<group>"; };
 		5F12274220BC2DCD0021CC21 /* VKappToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VKappToday.entitlements; sourceTree = "<group>"; };
 		5F12274520BC3AF10021CC21 /* TodayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewCell.swift; sourceTree = "<group>"; };
-		5F38651D2084C1C000B3ABA3 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		5F466A4E20C963DF00CCF012 /* NewsVTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVTC.swift; sourceTree = "<group>"; };
 		5F466A5020C96A4F00CCF012 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F745746207F3BAA00F0825B /* VKapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F745749207F3BAA00F0825B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F74574E207F3BAA00F0825B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F745750207F3BAB00F0825B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F745753207F3BAB00F0825B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F745755207F3BAB00F0825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,9 +184,6 @@
 		5F8FC8C7207F5BF500DC116D /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FC8C9207F5BF500DC116D /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FC8CF207F5C7000DC116D /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		5F8FC8D9207F5C8E00DC116D /* LoadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadOperation.swift; sourceTree = "<group>"; };
-		5F8FC8DA207F5C8F00DC116D /* LabelFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFrame.swift; sourceTree = "<group>"; };
-		5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClasses.swift; sourceTree = "<group>"; };
 		5F8FC8DC207F5C8F00DC116D /* VKServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServices.swift; sourceTree = "<group>"; };
 		5F8FC8E2207F5CB400DC116D /* FriendsTVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTVCCell.swift; sourceTree = "<group>"; };
 		5F8FC8E3207F5CB400DC116D /* FriendPhotosCVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPhotosCVCCell.swift; sourceTree = "<group>"; };
@@ -180,7 +196,6 @@
 		5F8FC8F8207F5D0200DC116D /* NewsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTVCell.swift; sourceTree = "<group>"; };
 		5F8FC8FF207F757700DC116D /* GroupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRequest.swift; sourceTree = "<group>"; };
 		5FBC4E2620865BE10090813E /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
-		5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellHeightDelegate.swift; sourceTree = "<group>"; };
 		5FD3177420CBE83C00E32143 /* PersonalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPageVC.swift; sourceTree = "<group>"; };
 		5FE35FD220C7B9A70074680B /* VKappWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKappWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE35FD520C7B9A80074680B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -202,12 +217,9 @@
 		5FE7BD9D20BDB4B70099A970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FE7BDA420BDB6690099A970 /* VKappImessage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VKappImessage.entitlements; sourceTree = "<group>"; };
 		5FE7BDA720BDB9F60099A970 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		639ADD4ACCC0EB4C639198A4 /* Pods-VKapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKapp/Pods-VKapp.release.xcconfig"; sourceTree = "<group>"; };
-		7BD22E4130645BD26B49D3D8 /* Pods-VKappToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKappToday/Pods-VKappToday.release.xcconfig"; sourceTree = "<group>"; };
-		86606BF1F58127E7D91ABE46 /* Pods_VKapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BD35B6369051787F0AEDD58 /* Pods-VKapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKapp/Pods-VKapp.debug.xcconfig"; sourceTree = "<group>"; };
-		B05866D87AF02144F8C56CDE /* Pods-VKappImessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappImessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKappImessage/Pods-VKappImessage.release.xcconfig"; sourceTree = "<group>"; };
-		C1BCF5FC720939B3E84E25C3 /* Pods_VKappToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKappToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BA61CBA66D9D650B9EBDA3 /* Pods-VKapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKapp.debug.xcconfig"; path = "Target Support Files/Pods-VKapp/Pods-VKapp.debug.xcconfig"; sourceTree = "<group>"; };
+		C72391A84572E1C7974C1381 /* Pods-VKappToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappToday.debug.xcconfig"; path = "Target Support Files/Pods-VKappToday/Pods-VKappToday.debug.xcconfig"; sourceTree = "<group>"; };
+		C99BF6B0325CFD20CC3F30E5 /* Pods-VKappImessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKappImessage.release.xcconfig"; path = "Target Support Files/Pods-VKappImessage/Pods-VKappImessage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F12273220BC2D420021CC21 /* NotificationCenter.framework in Frameworks */,
-				4E96C7BC3E063742C155C82E /* Pods_VKappToday.framework in Frameworks */,
+				E6707818B5677D1D233AE6A1 /* Pods_VKappToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +240,7 @@
 				5F8FC8C6207F5BF500DC116D /* RealmSwift.framework in Frameworks */,
 				5F8FC8C8207F5BF500DC116D /* SDWebImage.framework in Frameworks */,
 				5F8FC8CA207F5BF500DC116D /* SwiftyJSON.framework in Frameworks */,
-				72CE7AC4644EA76203E41661 /* Pods_VKapp.framework in Frameworks */,
+				86C5FED25F0615A8113D70DD /* Pods_VKapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FE7BD9420BDB4B30099A970 /* Messages.framework in Frameworks */,
-				176C54A91C50B27D54F0E22D /* Pods_VKappImessage.framework in Frameworks */,
+				42B25B33E87D65074F426DDB /* Pods_VKappImessage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +270,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F42D5EE2314335600754BE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F8FC8F8207F5D0200DC116D /* NewsTVCell.swift */,
+				5F8FC8EE207F5CD700DC116D /* GroupsTVCell.swift */,
+				5F8FC8EB207F5CD700DC116D /* MoreGroupsTVCCell.swift */,
+				5F8FC8E3207F5CB400DC116D /* FriendPhotosCVCCell.swift */,
+				5F8FC8E2207F5CB400DC116D /* FriendsTVCCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F9385A7231184530034FB8F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FC32F702312EDBA001C7819 /* MainTabVC.swift */,
+				5F8FC8CF207F5C7000DC116D /* LoginVC.swift */,
+				5FD3177620CBF20900E32143 /* Personal page */,
+				5F8FC8F3207F5CE700DC116D /* Groups */,
+				5F8FC8EA207F5CC500DC116D /* Friends */,
+				5F8FC8FC207F5D2D00DC116D /* News */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1FD8FE802314271B004CAB07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FD8FE812314272F004CAB07 /* Group.swift */,
+				1FD8FE832314274D004CAB07 /* Friend.swift */,
+				1FD8FE852314276C004CAB07 /* Follower.swift */,
+				1FD8FE872314278F004CAB07 /* Photo.swift */,
+				1FD8FE89231427C7004CAB07 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5F12273320BC2D420021CC21 /* VKappToday */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,14 +319,6 @@
 			path = VKappToday;
 			sourceTree = "<group>";
 		};
-		5F38651C2084C1A500B3ABA3 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				5F38651D2084C1C000B3ABA3 /* FirebaseService.swift */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
 		5F74573D207F3BAA00F0825B = {
 			isa = PBXGroup;
 			children = (
@@ -287,8 +328,8 @@
 				5FE35FD320C7B9A80074680B /* VKappWatch */,
 				5FE35FE220C7B9AC0074680B /* VKappWatch Extension */,
 				5F745747207F3BAA00F0825B /* Products */,
-				EFD6D523A1283C39720BEB02 /* Pods */,
 				F20F8CB0F18A73CFEF505AE5 /* Frameworks */,
+				B1D8A8DC249074868BEB1FA3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,17 +349,13 @@
 			isa = PBXGroup;
 			children = (
 				5F12274120BC2DB90021CC21 /* VKapp.entitlements */,
-				5F745749207F3BAA00F0825B /* AppDelegate.swift */,
-				5F8FC8CF207F5C7000DC116D /* LoginVC.swift */,
+				5F8FC8FE207F755A00DC116D /* Requests */,
+				5F8FC8E1207F5CA000DC116D /* Utilities */,
+				1F42D5EE2314335600754BE9 /* View */,
+				1FD8FE802314271B004CAB07 /* Model */,
+				1F9385A7231184530034FB8F /* Controllers */,
 				5F7ECA2120AD4621009B236E /* AppNotifications.swift */,
-				5F8FC8FE207F755A00DC116D /* VKRequests */,
-				5F8FC8E1207F5CA000DC116D /* Services */,
-				5FD3177620CBF20900E32143 /* personal page */,
-				5F8FC8F3207F5CE700DC116D /* Groups */,
-				5F8FC8EA207F5CC500DC116D /* Friends */,
-				5F8FC8FC207F5D2D00DC116D /* News */,
-				5F38651C2084C1A500B3ABA3 /* Firebase */,
-				5F74574D207F3BAA00F0825B /* Main.storyboard */,
+				5F745749207F3BAA00F0825B /* AppDelegate.swift */,
 				5F745750207F3BAB00F0825B /* Assets.xcassets */,
 				5F745752207F3BAB00F0825B /* LaunchScreen.storyboard */,
 				5F466A5020C96A4F00CCF012 /* GoogleService-Info.plist */,
@@ -327,24 +364,20 @@
 			path = VKapp;
 			sourceTree = "<group>";
 		};
-		5F8FC8E1207F5CA000DC116D /* Services */ = {
+		5F8FC8E1207F5CA000DC116D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5FBC4E29208687400090813E /* PostCellHeightDelegate.swift */,
-				5F8FC8DA207F5C8F00DC116D /* LabelFrame.swift */,
-				5F8FC8D9207F5C8E00DC116D /* LoadOperation.swift */,
-				5F8FC8DB207F5C8F00DC116D /* MyClasses.swift */,
+				1F9385AA231184CE0034FB8F /* ExtensionsUI.swift */,
+				1F2FB35A2314F0B0005D74A6 /* Realm.swift */,
 			);
-			path = Services;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		5F8FC8EA207F5CC500DC116D /* Friends */ = {
 			isa = PBXGroup;
 			children = (
 				5F8FC8E5207F5CB500DC116D /* FriendPhotosCVC.swift */,
-				5F8FC8E3207F5CB400DC116D /* FriendPhotosCVCCell.swift */,
 				5F8FC8E4207F5CB400DC116D /* FriendsTVC.swift */,
-				5F8FC8E2207F5CB400DC116D /* FriendsTVCCell.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -353,9 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				5F8FC8ED207F5CD700DC116D /* GroupsTableView.swift */,
-				5F8FC8EE207F5CD700DC116D /* GroupsTVCell.swift */,
 				5F8FC8EC207F5CD700DC116D /* MoreGroupsTVC.swift */,
-				5F8FC8EB207F5CD700DC116D /* MoreGroupsTVCCell.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -364,29 +395,31 @@
 			isa = PBXGroup;
 			children = (
 				5F466A4E20C963DF00CCF012 /* NewsVTC.swift */,
-				5F8FC8F8207F5D0200DC116D /* NewsTVCell.swift */,
 				5F7EE43E20A9949600D740A4 /* AddMyPost.swift */,
 				5F7EE44220A9BAF900D740A4 /* GeoLocationVC.swift */,
+				1FD96F5A2316DB980015613F /* MapTableViewCell.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
 		};
-		5F8FC8FE207F755A00DC116D /* VKRequests */ = {
+		5F8FC8FE207F755A00DC116D /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				5F8FC8DC207F5C8F00DC116D /* VKServices.swift */,
 				5F8FC8FF207F757700DC116D /* GroupRequest.swift */,
 				5FBC4E2620865BE10090813E /* NewsRequest.swift */,
+				1FA3AFBE231BE6C70077FAEC /* RequestMethod.swift */,
 			);
-			path = VKRequests;
+			path = Requests;
 			sourceTree = "<group>";
 		};
-		5FD3177620CBF20900E32143 /* personal page */ = {
+		5FD3177620CBF20900E32143 /* Personal page */ = {
 			isa = PBXGroup;
 			children = (
 				5FD3177420CBE83C00E32143 /* PersonalPageVC.swift */,
+				1FA3AFA5231BDEDF0077FAEC /* UserHeader.swift */,
 			);
-			path = "personal page";
+			path = "Personal page";
 			sourceTree = "<group>";
 		};
 		5FE35FD320C7B9A80074680B /* VKappWatch */ = {
@@ -426,17 +459,17 @@
 			path = VKappImessage;
 			sourceTree = "<group>";
 		};
-		EFD6D523A1283C39720BEB02 /* Pods */ = {
+		B1D8A8DC249074868BEB1FA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9BD35B6369051787F0AEDD58 /* Pods-VKapp.debug.xcconfig */,
-				639ADD4ACCC0EB4C639198A4 /* Pods-VKapp.release.xcconfig */,
-				50416D29405B067211FD299D /* Pods-VKappToday.debug.xcconfig */,
-				7BD22E4130645BD26B49D3D8 /* Pods-VKappToday.release.xcconfig */,
-				3D8A7AACD972E1AA64AEF15F /* Pods-VKappImessage.debug.xcconfig */,
-				B05866D87AF02144F8C56CDE /* Pods-VKappImessage.release.xcconfig */,
+				B1BA61CBA66D9D650B9EBDA3 /* Pods-VKapp.debug.xcconfig */,
+				1030B734595CF1BBD95273B4 /* Pods-VKapp.release.xcconfig */,
+				27B3EB42904C075616D1FF16 /* Pods-VKappImessage.debug.xcconfig */,
+				C99BF6B0325CFD20CC3F30E5 /* Pods-VKappImessage.release.xcconfig */,
+				C72391A84572E1C7974C1381 /* Pods-VKappToday.debug.xcconfig */,
+				085903006EC312B48765945E /* Pods-VKappToday.release.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		F20F8CB0F18A73CFEF505AE5 /* Frameworks */ = {
@@ -446,11 +479,11 @@
 				5F8FC8C5207F5BF500DC116D /* RealmSwift.framework */,
 				5F8FC8C7207F5BF500DC116D /* SDWebImage.framework */,
 				5F8FC8C9207F5BF500DC116D /* SwiftyJSON.framework */,
-				86606BF1F58127E7D91ABE46 /* Pods_VKapp.framework */,
 				5F12273120BC2D420021CC21 /* NotificationCenter.framework */,
-				C1BCF5FC720939B3E84E25C3 /* Pods_VKappToday.framework */,
 				5FE7BD9320BDB4B30099A970 /* Messages.framework */,
-				50B52C07CC9BC9C77E1096B8 /* Pods_VKappImessage.framework */,
+				2868B95EBFAF170666AC6CF8 /* Pods_VKapp.framework */,
+				238BD1D66FCC15F3F545C02F /* Pods_VKappImessage.framework */,
+				1333750C2D569F25847DB781 /* Pods_VKappToday.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -462,11 +495,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F12273F20BC2D420021CC21 /* Build configuration list for PBXNativeTarget "VKappToday" */;
 			buildPhases = (
-				D9D826DEBB321B45CE95EA68 /* [CP] Check Pods Manifest.lock */,
+				15875EEF75390B7123BD621A /* [CP] Check Pods Manifest.lock */,
 				5F12272C20BC2D420021CC21 /* Sources */,
 				5F12272D20BC2D420021CC21 /* Frameworks */,
 				5F12272E20BC2D420021CC21 /* Resources */,
-				F8E42115D3F38A5ED4F64DC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -481,14 +513,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F745758207F3BAB00F0825B /* Build configuration list for PBXNativeTarget "VKapp" */;
 			buildPhases = (
-				F9CC494D542D845520B1A795 /* [CP] Check Pods Manifest.lock */,
+				49B393D5ACA306DC18B1CFCD /* [CP] Check Pods Manifest.lock */,
 				5F745742207F3BAA00F0825B /* Sources */,
 				5F745743207F3BAA00F0825B /* Frameworks */,
 				5F745744207F3BAA00F0825B /* Resources */,
-				613E07C72AAC033DBE3B5CF2 /* [CP] Embed Pods Frameworks */,
-				BD0BA17714599C897D7FB618 /* [CP] Copy Pods Resources */,
 				5F12274020BC2D420021CC21 /* Embed App Extensions */,
 				5FE35FF720C7B9AD0074680B /* Embed Watch Content */,
+				794AC562C6F48F10CF767395 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -541,11 +572,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FE7BDA320BDB4B70099A970 /* Build configuration list for PBXNativeTarget "VKappImessage" */;
 			buildPhases = (
-				8F9B0B21FF9B127E1A6884B9 /* [CP] Check Pods Manifest.lock */,
+				0824E6323635CD868DDC1A54 /* [CP] Check Pods Manifest.lock */,
 				5FE7BD8E20BDB4B30099A970 /* Sources */,
 				5FE7BD8F20BDB4B30099A970 /* Frameworks */,
 				5FE7BD9020BDB4B30099A970 /* Resources */,
-				B762B96B14F8681871137882 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -568,6 +598,7 @@
 				TargetAttributes = {
 					5F12272F20BC2D420021CC21 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1030;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -576,6 +607,7 @@
 					};
 					5F745745207F3BAA00F0825B = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1030;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -590,9 +622,11 @@
 					};
 					5FE35FDD20C7B9AC0074680B = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1030;
 					};
 					5FE7BD9120BDB4B30099A970 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1030;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -639,7 +673,6 @@
 				5F745754207F3BAB00F0825B /* LaunchScreen.storyboard in Resources */,
 				5F466A5120C96A4F00CCF012 /* GoogleService-Info.plist in Resources */,
 				5F745751207F3BAB00F0825B /* Assets.xcassets in Resources */,
-				5F74574F207F3BAA00F0825B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,50 +705,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		613E07C72AAC033DBE3B5CF2 /* [CP] Embed Pods Frameworks */ = {
+		0824E6323635CD868DDC1A54 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VKapp/Pods-VKapp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKapp/Pods-VKapp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F9B0B21FF9B127E1A6884B9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VKappImessage-checkManifestLockResult.txt",
 			);
@@ -724,46 +727,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B762B96B14F8681871137882 /* [CP] Copy Pods Resources */ = {
+		15875EEF75390B7123BD621A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKappImessage/Pods-VKappImessage-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD0BA17714599C897D7FB618 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKapp/Pods-VKapp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D9D826DEBB321B45CE95EA68 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VKappToday-checkManifestLockResult.txt",
 			);
@@ -772,37 +749,43 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8E42115D3F38A5ED4F64DC7 /* [CP] Copy Pods Resources */ = {
+		49B393D5ACA306DC18B1CFCD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKappToday/Pods-VKappToday-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9CC494D542D845520B1A795 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VKapp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		794AC562C6F48F10CF767395 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKapp/Pods-VKapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKapp/Pods-VKapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VKapp/Pods-VKapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -814,8 +797,9 @@
 			files = (
 				5F12274320BC37D30021CC21 /* NewsRequest.swift in Sources */,
 				5F12273520BC2D420021CC21 /* TodayViewController.swift in Sources */,
-				5FE35FCF20C7B9700074680B /* MyClasses.swift in Sources */,
+				1FD8FE8E231429DA004CAB07 /* Friend.swift in Sources */,
 				5F12274620BC3AF10021CC21 /* TodayViewCell.swift in Sources */,
+				1FD8FE8B231429D7004CAB07 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,28 +809,34 @@
 			files = (
 				5F7EE43F20A9949600D740A4 /* AddMyPost.swift in Sources */,
 				5F8FC8F0207F5CD800DC116D /* MoreGroupsTVC.swift in Sources */,
+				1FA3AFBF231BE6C70077FAEC /* RequestMethod.swift in Sources */,
 				5F8FC8E0207F5C8F00DC116D /* VKServices.swift in Sources */,
+				1F2FB35B2314F0B0005D74A6 /* Realm.swift in Sources */,
 				5F8FC8E7207F5CB500DC116D /* FriendPhotosCVCCell.swift in Sources */,
-				5F8FC8DF207F5C8F00DC116D /* MyClasses.swift in Sources */,
-				5F38651E2084C1C000B3ABA3 /* FirebaseService.swift in Sources */,
-				5F8FC8DE207F5C8F00DC116D /* LabelFrame.swift in Sources */,
 				5F466A4F20C963DF00CCF012 /* NewsVTC.swift in Sources */,
-				5FBC4E2A208687400090813E /* PostCellHeightDelegate.swift in Sources */,
+				1FD8FE8A231427C7004CAB07 /* User.swift in Sources */,
 				5F8FC900207F757700DC116D /* GroupRequest.swift in Sources */,
 				5F8FC8E8207F5CB500DC116D /* FriendsTVC.swift in Sources */,
 				5F7ECA2220AD4621009B236E /* AppNotifications.swift in Sources */,
 				5F7EE44320A9BAF900D740A4 /* GeoLocationVC.swift in Sources */,
 				5FBC4E2720865BE10090813E /* NewsRequest.swift in Sources */,
+				1FC32F712312EDBA001C7819 /* MainTabVC.swift in Sources */,
 				5F8FC8E9207F5CB500DC116D /* FriendPhotosCVC.swift in Sources */,
+				1FD8FE862314276C004CAB07 /* Follower.swift in Sources */,
+				1FD8FE842314274D004CAB07 /* Friend.swift in Sources */,
+				1F9385AB231184CE0034FB8F /* ExtensionsUI.swift in Sources */,
 				5F8FC8F2207F5CD800DC116D /* GroupsTVCell.swift in Sources */,
 				5F8FC8E6207F5CB500DC116D /* FriendsTVCCell.swift in Sources */,
-				5F8FC8DD207F5C8F00DC116D /* LoadOperation.swift in Sources */,
+				1FD8FE822314272F004CAB07 /* Group.swift in Sources */,
 				5F74574A207F3BAA00F0825B /* AppDelegate.swift in Sources */,
 				5F8FC8EF207F5CD800DC116D /* MoreGroupsTVCCell.swift in Sources */,
 				5FD3177520CBE83C00E32143 /* PersonalPageVC.swift in Sources */,
 				5F8FC8F1207F5CD800DC116D /* GroupsTableView.swift in Sources */,
+				1FD96F5B2316DB980015613F /* MapTableViewCell.swift in Sources */,
 				5F8FC8D5207F5C7100DC116D /* LoginVC.swift in Sources */,
 				5F8FC8FA207F5D0200DC116D /* NewsTVCell.swift in Sources */,
+				1FD8FE8823142790004CAB07 /* Photo.swift in Sources */,
+				1FA3AFA6231BDEDF0077FAEC /* UserHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,8 +857,9 @@
 			files = (
 				5FE7BDA620BDB72A0099A970 /* NewsRequest.swift in Sources */,
 				5FE7BD9720BDB4B30099A970 /* MessagesViewController.swift in Sources */,
-				5FE35FCE20C7B9700074680B /* MyClasses.swift in Sources */,
+				1FD8FE8D231429DA004CAB07 /* Friend.swift in Sources */,
 				5FE7BDA820BDB9F60099A970 /* MessageTableViewCell.swift in Sources */,
+				1FD8FE8C231429D7004CAB07 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,14 +897,6 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
-		5F74574D207F3BAA00F0825B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5F74574E207F3BAA00F0825B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5F745752207F3BAB00F0825B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -943,7 +926,7 @@
 /* Begin XCBuildConfiguration section */
 		5F12273D20BC2D420021CC21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50416D29405B067211FD299D /* Pods-VKappToday.debug.xcconfig */;
+			baseConfigurationReference = C72391A84572E1C7974C1381 /* Pods-VKappToday.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VKappToday/VKappToday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -957,14 +940,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp.VKappTod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5F12273E20BC2D420021CC21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BD22E4130645BD26B49D3D8 /* Pods-VKappToday.release.xcconfig */;
+			baseConfigurationReference = 085903006EC312B48765945E /* Pods-VKappToday.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VKappToday/VKappToday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -978,7 +961,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp.VKappTod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1099,7 +1082,7 @@
 		};
 		5F745759207F3BAB00F0825B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD35B6369051787F0AEDD58 /* Pods-VKapp.debug.xcconfig */;
+			baseConfigurationReference = B1BA61CBA66D9D650B9EBDA3 /* Pods-VKapp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1113,14 +1096,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5F74575A207F3BAB00F0825B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 639ADD4ACCC0EB4C639198A4 /* Pods-VKapp.release.xcconfig */;
+			baseConfigurationReference = 1030B734595CF1BBD95273B4 /* Pods-VKapp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1134,7 +1117,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1155,7 +1138,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -1177,7 +1160,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -1223,7 +1206,7 @@
 		};
 		5FE7BDA120BDB4B70099A970 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D8A7AACD972E1AA64AEF15F /* Pods-VKappImessage.debug.xcconfig */;
+			baseConfigurationReference = 27B3EB42904C075616D1FF16 /* Pods-VKappImessage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = VKappImessage/VKappImessage.entitlements;
@@ -1238,14 +1221,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp.VKappImessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5FE7BDA220BDB4B70099A970 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B05866D87AF02144F8C56CDE /* Pods-VKappImessage.release.xcconfig */;
+			baseConfigurationReference = C99BF6B0325CFD20CC3F30E5 /* Pods-VKappImessage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = VKappImessage/VKappImessage.entitlements;
@@ -1260,7 +1243,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = didar.VKapp.VKappImessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
